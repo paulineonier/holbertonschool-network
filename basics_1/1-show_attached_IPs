@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script displays all active IPv4 IP addresses on the machine it's executed on.
+
+# Use the `ip` command to list all IPv4 addresses associated with network interfaces.
+ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
